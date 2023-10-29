@@ -1,8 +1,6 @@
+appName: postgresql
 
-
-appName: node-cat
-
-port: 3012
+port: 5432
 
 namespace: default
 
@@ -10,9 +8,11 @@ configmap:
   name: myhelmapp-configmap-v1
   data:
     CUSTOM_HEADER: 'This app was deployed with helm!'
+  username: postgres
+  password: postgres
 
 image:
-  name: fandilladp/node-cat-app
+  name: postgres/node-cat-app
   tag: latest
 
 autoscaling:
