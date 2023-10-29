@@ -15,6 +15,16 @@ image:
   name: fandilladp/node-cat-app
   tag: latest
 
+dbConfig:
+  host: "127.0.0.1"
+  port: "5432"
+  database: "postgres"
+
+dbCredentials:
+  user: "postgres"
+  password: "mypassword"
+
+
 autoscaling:
   minReplicas: 2
   maxReplicas: 5
